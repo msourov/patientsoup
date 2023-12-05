@@ -1,7 +1,7 @@
 import Hero from "./components/hero";
 import Items from "./components/items";
 import Pricing from "./components/pricing";
-import Recommendation from "./components/recommendation";
+import WhyThis from "./components/WhyThis";
 import Faq from "./components/faq";
 import AppProvider from "./context";
 import "./App.css";
@@ -12,7 +12,7 @@ function App() {
       <AppProvider>
         <Hero />
         <Items />
-        <Recommendation />
+        <WhyThis />
         <Pricing />
         <Faq />
       </AppProvider>

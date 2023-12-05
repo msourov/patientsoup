@@ -1,0 +1,27 @@
+.items-container {
+  padding-block: 2em;
+}
+
+.items-title {
+  text-align: center;
+}
+.items-list {
+  text-align: center;
+  margin-block: 2em;
+}
+.listitem-wrapper {
+  margin-block: 3em;
+  display: flex;
+  gap: 5em;
+  justify-content: center;
+}
+
+.items-description {
+  margin-block: 2em;
+  margin-inline: auto;
+  width: 70%;
+  text-align: center;
+}
+.items-call-btn-wrapper {
+  text-align: center;
+}
