@@ -1,0 +1,23 @@
+.hero-container {
+  background-color: #f8f3f0;
+  width: 100%;
+  padding-block: 5em;
+  /* border: 3px solid black; */
+}
+
+.hero-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+.hero-text-wrapper {
+  text-align: left;
+  width: 40%;
+}
+
+.hero-img {
+  width: 50%;
+}
+.hero-order-btn {
+  float: left;
+  margin-block: 2em;
+}
