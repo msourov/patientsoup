@@ -22,13 +22,13 @@ const Items = () => {
       <h1 className="items-title">{name}</h1>
       <p className="items-description">{description}</p>
       <div className="listitem-wrapper">
-        <div className="left-list">
+        <div className="h-left-list">
           {firstHalf &&
             firstHalf.map((item, index) => {
               return <li key={index}>{item}</li>;
             })}
         </div>
-        <div className="right-list">
+        <div className="h-right-list">
           {secondHalf &&
             secondHalf.map((item, index) => {
               return <li key={index}>{item}</li>;

@@ -9,7 +9,7 @@ const AppProvider = ({ children }) => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        "http://192.168.60.86:8000/margaret/enduser/all?c=224f8948-8b50-4c5e-b41b-d7e14f7636fa&t=2"
+        "http://192.168.0.143:8000/margaret/enduser/all?c=224f8948-8b50-4c5e-b41b-d7e14f7636fa&t=2"
       );
       if (response.status === 200) {
         setData(response.data.body[0]);

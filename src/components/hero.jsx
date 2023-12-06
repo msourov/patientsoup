@@ -9,9 +9,7 @@ const Hero = () => {
   const bannerItems = data?.banner?.[0];
   const { name, uid, description, desc_point } = bannerItems || [];
 
-  const imgUrl = uid
-    ? `http://192.168.60.86:8000/images/${uid}.png`
-    : "./images/grocery-store.png";
+  const imgUrl = uid ? `http://192.168.0.143:8000/images/${uid}.png` : null;
 
   return (
     <div className="hero-container">
