@@ -5,7 +5,19 @@ import { Button } from "antd";
 import { PhoneFilled } from "@ant-design/icons";
 
 const Items = () => {
-  const { data } = useContext(AppContext);
+  const { data, loading, error } = useContext(AppContext);
+  if (loading) {
+    return <div style={{ textAlign: "center" }}>Loading...</div>;
+  }
+
+  if (error) {
+    return (
+      <div style={{ textAlign: "center", fontSize: "1rem" }}>
+        Error loading data
+      </div>
+    );
+  }
+
   const items = data?.fact[0];
   const { name, description, uid, desc_point } = items || [];
   const listItems = Object.values(desc_point || []);
@@ -15,7 +27,6 @@ const Items = () => {
   const secondHalf = Object.values(
     listItems?.slice(Math.ceil(listItems.length) / 2)
   );
-
 
   return (
     <div className="items-container">

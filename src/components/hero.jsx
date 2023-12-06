@@ -5,11 +5,22 @@ import { Button } from "antd";
 import { ShoppingCartOutlined } from "@ant-design/icons";
 
 const Hero = () => {
-  const { data } = useContext(AppContext);
+  const { data, loading, error } = useContext(AppContext);
+  if (loading) {
+    return <div style={{ textAlign: "center" }}>Loading...</div>;
+  }
+
+  if (error) {
+    return (
+      <div style={{ textAlign: "center", fontSize: "1rem" }}>
+        Error loading data
+      </div>
+    );
+  }
   const bannerItems = data?.banner?.[0];
   const { name, uid, description, desc_point } = bannerItems || [];
 
-  const imgUrl = uid ? `http://192.168.0.143:8000/images/${uid}.png` : null;
+  const imgUrl = uid ? `http://192.168.60.86:8000/images/${uid}.png` : null;
 
   return (
     <div className="hero-container">
